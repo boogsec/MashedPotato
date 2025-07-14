@@ -1,7 +1,7 @@
 # MashedPotato
 A self-contained Windows local privilege escalation proof-of-concept that demonstrates SYSTEM impersonation via named pipes. It consists of two C programs:
- * server.c: Creates a named-pipe listener, waits for a SYSTEM-level client, impersonates its token, then spawns a SYSTEM shell.
- * bait.c: A minimal loader that connects to the named pipe as SYSTEM (after you elevate it via scheduled task/UAC trick) and sends the handshake byte.
+ * `server.c`: Creates a named-pipe listener, waits for a SYSTEM-level client, impersonates its token, then spawns a SYSTEM shell.
+ * `bait.c`: A minimal loader that connects to the named pipe as SYSTEM (after you elevate it via scheduled task/UAC trick) and sends the handshake byte.
 
 # Prerequisites
 Make sure you have a Linux environment with the mingw-w64 cross-compiler installed:
